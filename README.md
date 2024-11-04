@@ -21,6 +21,7 @@ Enabling teams to work cohesively within a CI/CD pipeline, ultimately accelerati
 To install Jenkins on Amazon Linux, follow these steps:
 
 Update the System:
+
 sudo dnf update
 
 
@@ -30,24 +31,40 @@ sudo dnf install java-17-amazon-corretto -y
 java -version  # Verify Java installation
 
 
+
 Add the Jenkins Repository:
 
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+
 Install Jenkins:
 
 
+
 sudo dnf install jenkins -y
+
 Enable and Start Jenkins Service:
 
 
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
+
+
+
+
+
+
+
+
+
+
 Retrieve Initial Admin Password:
 
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
 After accessing Jenkins at http://your-server-ip:8080, you’ll have the option to install suggested plugins or choose specific plugins, based on your server’s resources.
 
 # Creating and Running Jenkins Jobs

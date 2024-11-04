@@ -21,6 +21,7 @@ Enabling teams to work cohesively within a CI/CD pipeline, ultimately accelerati
 To install Jenkins on Amazon Linux, follow these steps:
 
 Update the System:
+
 sudo dnf update
 
 
@@ -28,6 +29,7 @@ Install Java (Jenkins requires Java to run):
 
 sudo dnf install java-17-amazon-corretto -y
 java -version  # Verify Java installation
+
 
 
 Add the Jenkins Repository:
@@ -38,7 +40,9 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 Install Jenkins:
 
 
+
 sudo dnf install jenkins -y
+
 Enable and Start Jenkins Service:
 
 
